@@ -1,0 +1,12 @@
+[FILE]
+FILENAME=test04.js
+Class undefined=6
+Method undefined=6
+[CLASS]
+TOTAL=6
+AVERAGE=6
+STD_DEV=0
+[METHOD]
+TOTAL=6
+AVERAGE=6
+STD_DEV=0

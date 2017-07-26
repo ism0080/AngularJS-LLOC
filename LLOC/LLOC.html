@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myapp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="angular.min.js"></script>
+  <script src="LLOCmodel.js"></script>
+      <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <script src="http://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <title>Assignment</title>
+</head>
+<body>
+    <div data-ng-controller="main" class="container">
+        <h1>Select one js file</h1>
+            <h3>(Refer to <a href="ReadMe.txt">ReadMe.txt</a> before using)</h3>
+            <input type="file" on-read-file="" onchange="angular.element(this).scope().filesUpload(event)"/>  <!-- webkitdirectory onchange="angular.element(this).scope().filesUpload(event)"--> 
+                <div>
+                    <h2>File content is:</h2>
+                    <div ng-repeat="c in content track by $index">
+                    <b>{{filenameArray[$index]}}</b> <br /> <pre>{{ content[$index] }}</pre><br /></div>
+                    
+                    <button type="button" class="btn btn-primary" ng-click="parseVAR(); parseCount();getMean(); stanD()"> Count </button>
+                    
+					<h1 > {{classes[0]}} </h1>
+					<b> {{method[0]}} </b>
+					<pre>
+                    Count: {{logic.length}} <br />
+                    Mean: {{mean}} <br />
+                    Std_dev: {{std}} <br />
+                    </pre>
+				</div>
+                <br />
+                 <button type="button" class="btn btn-primary" ng-click="doSave()">Save to a Text File</button>
+            </div>
+</html>

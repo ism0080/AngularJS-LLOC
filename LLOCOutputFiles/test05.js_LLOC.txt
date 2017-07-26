@@ -1,0 +1,12 @@
+[FILE]
+FILENAME=test05.js
+Class undefined=2
+Method undefined=2
+[CLASS]
+TOTAL=2
+AVERAGE=2
+STD_DEV=0
+[METHOD]
+TOTAL=2
+AVERAGE=2
+STD_DEV=0
